@@ -4,6 +4,8 @@
 
 실제 서비스 코드는 포함하지 않습니다. 새 프로젝트의 목적과 기술 스택에 맞는 구성을 선택하고, 필요할 때 템플릿·스크립트·도구를 연결합니다.
 
+전체 문서 탐색은 [`index.md`](index.md)에서 시작합니다.
+
 ## 구조
 
 ```text
@@ -37,12 +39,14 @@ monorepo
 ```text
 project/
 ├── AGENTS.md
-├── docs/               # 전체 프로젝트 문서
+├── docs/               # 전체 프로젝트 문서·work-items
 └── app/
     ├── web/docs/       # 프론트엔드 문서
     ├── backend/docs/   # 백엔드 문서
     └── mobile/docs/    # 모바일 문서, 선택 사항
 ```
+
+OpenAPI·Orval을 사용하는 모노레포는 `packages/api/`에 공유 TypeScript API client를 둡니다.
 
 ### 기술 계층
 

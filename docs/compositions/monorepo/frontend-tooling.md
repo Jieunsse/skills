@@ -12,6 +12,8 @@ app/web/docs           도구 사용법과 UI 문서
 
 패키지 매니저는 모노레포 전체에서 하나만 사용하며 기본값은 `pnpm`이다. HTTP client와 adapter는 [`frontend-http-client.md`](../../model/frontend-http-client.md) 기준으로 결정하고, 공유 API client가 있으면 루트 문서에 경계를 기록한다.
 
+백엔드 API를 프론트엔드에서 소비하는 모노레포는 Orval을 선택할 수 있다. 백엔드의 springdoc-openapi 명세를 원본으로 사용하고, 웹·모바일이 공유하는 생성 코드는 기본적으로 `packages/api/generated`에 둔다. 상세 기준은 [`api-code-generation.md`](../../model/api-code-generation.md)를 따른다.
+
 Turborepo는 JS/TS 앱이나 공유 패키지가 둘 이상일 때 선택한다. 도입 기준과 `turbo.json`, task·cache·CI 규칙은 [`monorepo-turborepo.md`](../../model/monorepo-turborepo.md)를 따른다.
 
 ## 기본 검증 흐름

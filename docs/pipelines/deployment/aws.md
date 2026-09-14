@@ -41,7 +41,11 @@ EC2 · Ubuntu LTS
 → 모니터링
 ```
 
-배포 자동화는 GitHub Actions에서 OIDC 기반 AWS IAM Role을 획득한 뒤 SSM 또는 CodeDeploy로 실행한다. EC2에 장기 AWS Access Key를 저장하지 않는다.
+배포 자동화는 GitHub Actions에서 OIDC 기반 AWS IAM Role을 획득한 뒤 SSM으로 실행한다. EC2에 장기 AWS Access Key를 저장하지 않는다.
+
+## 배포 트리거
+
+staging은 `workflow_dispatch`로 실행한다. production은 GitHub Environment 승인 후 `workflow_dispatch`로 실행하며, 기본 브랜치 merge만으로 자동 배포하지 않는다. 실제 GitHub Actions workflow와 IAM Role을 구성하기 전에는 이 흐름을 수동 배포 절차로 취급한다.
 
 ## 롤백
 

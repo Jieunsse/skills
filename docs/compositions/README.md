@@ -9,7 +9,7 @@ docs/compositions/
 └── monorepo/
 ```
 
-각 composition은 생성할 구조, 적용할 문서, 외부 의존성, 설치 순서, 생성 후 검증 방법을 정의한다. composition 자체는 문서 명세만 관리하며, `scripts/scaffold.mjs`가 공식 생성기 실행과 기본 문서 배치를 담당한다.
+각 composition은 생성할 구조, 적용할 문서, 외부 의존성, 설치 순서, 생성 후 검증 방법을 정의한다. composition 자체는 문서 명세만 관리하며, `scripts/scaffold.mjs`가 공식 생성기 실행과 기본 문서 배치를 담당한다. 선택된 composition은 적용할 Skills·Harness·Loops·Pipelines의 기준을 정하지만, 해당 자동화를 모두 구현하지는 않는다.
 
 프론트엔드 목적별 기본 구성:
 

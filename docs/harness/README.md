@@ -9,7 +9,9 @@ docs/harness/
 ├── implementation.md  # 코드 작성과 규칙 라벨
 ├── verification.md    # 검증 게이트와 판정
 ├── verification-matrix.md
-├── frontend/
+├── frontend/          # 웹 프론트엔드 추가 규칙
+├── backend/           # Spring Boot 추가 규칙
+├── mobile/            # React Native + Expo 추가 규칙
 └── mcp/
 ```
 
@@ -17,8 +19,12 @@ docs/harness/
 
 하네스의 기본 작업 단위는 `Harness Run`이다. 하나의 사용자 요청을 분석하고, 변경하고, 검증하는 전체 작업을 하나의 실행 단위로 관리한다. 각 작업은 `Proposed → Discovered → Implementing → Verifying → Completed` 상태를 거치며, 필요할 때 `Blocked` 또는 `Abandoned`로 종료한다.
 
-작업 산출물은 기본적으로 `docs/work-items/<work-item>.md` 한 문서에 기록한다. 큰 작업만 `discovery.md`, `implementation.md`, `verification.md`로 분리한다.
+Engineering Loop에서 `Discover → Plan·Execute → Verify`가 각각 Harness의 `Discovery → Implementation → Verification`을 트리거한다. 요구사항이 모호하면 Harness보다 문제 정의 또는 제품 기획 Loop를 먼저 수행한다. 전체 연결은 [`../model/operating-model.md`](../model/operating-model.md)를 따른다.
+
+작업 산출물은 기본적으로 `docs/work-items/<work-item>.md` 한 문서에 기록한다. 큰 작업만 `discovery.md`, `implementation.md`, `verification.md`로 분리한다. `docs/work-items/`는 생성 프로젝트의 기본 문서 폴더로 만든다.
 
 공통 도구와 계층별 도구를 분리하고, 도구의 설치 방법·전제 조건·입출력·실패 시 대응을 기록한다. Codex와 Claude는 동일한 하네스 규칙을 사용하며 별도 규칙 문서로 분리하지 않는다.
 
 외부 도구 연결은 `harness/mcp/`에서 관리한다. 주요 MCP 제공자는 Figma, Notion, Slack, Linear다.
+
+계층별 Harness는 별도 작업 흐름을 만들지 않는다. 공통 `Harness Run`에 해당 계층의 추가 확인 항목, 작성 규칙, 검증을 더한다.

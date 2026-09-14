@@ -262,7 +262,7 @@ function ensureEmptyTarget(target) {
 
 function writeProjectDocs(target, choice) {
   const rootDocs = join(target, "docs");
-  const paths = [rootDocs, join(rootDocs, "architecture"), join(rootDocs, "decisions"), join(rootDocs, "workflows"), join(rootDocs, "conventions")];
+  const paths = [rootDocs, join(rootDocs, "architecture"), join(rootDocs, "decisions"), join(rootDocs, "workflows"), join(rootDocs, "conventions"), join(rootDocs, "work-items")];
   if (choice.repository === "monorepo") paths.push(join(target, "app", "web", "docs"));
   if (choice.repository === "monorepo") paths.push(join(target, "app", "backend", "docs"));
   if (choice.monorepo === "web-backend-mobile") paths.push(join(target, "app", "mobile", "docs"));

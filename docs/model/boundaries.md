@@ -2,14 +2,12 @@
 
 ## 핵심 구역
 
-```text
-skills → harness → loops → pipelines → compositions
-```
+`skills`, `harness`, `loops`, `pipelines`, `compositions`는 순차 계층이 아니라 책임이 다른 운영 요소다. 전체 연결과 상태 전이는 [`operating-model.md`](operating-model.md)를 따른다.
 
 - `skills`는 작업 방법을 설명하지만 실행 코드를 소유하지 않는다.
-- `harness`는 실행 환경과 도구를 설명하지만 제품 의사결정을 소유하지 않는다.
-- `loops`는 반복 구조를 설명하지만 특정 기술 스택에 종속되지 않는다.
-- `pipelines`는 순서와 연결을 설명한다.
+- `harness`는 한 작업의 코드베이스 확인·작성·검증 기준을 설명하지만 제품 의사결정을 소유하지 않는다.
+- `loops`는 목표·피드백·복귀·종료를 관리하지만 특정 기술 스택에 종속되지 않는다.
+- `pipelines`는 이슈·PR·CI·배포 같은 외부 이벤트의 순서와 연결을 설명한다.
 - `compositions`는 실제 프로젝트 형태에 맞춰 위 요소를 조합한다.
 
 ## 문서 위치
