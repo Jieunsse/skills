@@ -53,3 +53,5 @@ AI는 사용자의 자연어 요청을 위 명령의 preset과 선택 옵션으�
 - 공식 생성기와 문서에 명시된 명령만 실행한다.
 - 인증값·비밀값을 생성하거나 기록하지 않는다.
 - 생성 후 `AGENTS.md`, 루트 `docs`, 계층별 `docs`를 확인한다.
+
+`project-starter` npm 패키지는 아직 배포하지 않았다. 현재는 이 저장소에서 `node scripts/scaffold.mjs`를 실행한다.

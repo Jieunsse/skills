@@ -1,6 +1,6 @@
 # AI 대화형 스캐폴딩
 
-사용자-facing CLI 이름은 `project-starter`로 한다.
+사용자-facing CLI 이름은 `project-starter`로 예약한다. 아직 npm 패키지는 배포하지 않았고, 현재 실행 가능한 도구는 `scripts/scaffold.mjs`다.
 
 빈 프로젝트에서 사용자가 이 문서 저장소의 GitHub 주소를 AI에게 제공하고 자연어로 프로젝트 생성을 요청할 수 있도록 설계한다.
 
@@ -9,7 +9,7 @@
 ```text
 사용자가 저장소 URL 제공
 → AI가 README·AGENTS.md·관련 composition 읽기
-→ 자연어 요청에서 목적과 제약 추출
+→ 자연어 요청에서 목적·제약·패키지 매니저·HTTP client 요구 추출
 → preset 선택
 → 선택 결과와 생성 계획 확인
 → 공식 생성기 실행
@@ -27,7 +27,7 @@
 | 관리자 + 백엔드 모노레포 | `monorepo-web-backend-admin` |
 | 웹 + 백엔드 + 모바일 모노레포 | `monorepo-web-backend-mobile` |
 
-## AI 실행 예시
+## 목표 CLI 인터페이스
 
 ```bash
 pnpm create project-starter . \
@@ -35,13 +35,15 @@ pnpm create project-starter . \
   --execute
 ```
 
-내부 개발 환경에서는 다음 명령으로 동일한 기능을 실행할 수 있다.
+현재 저장소에서는 다음 명령으로 동일한 기능을 실행할 수 있다.
 
 ```bash
 node scripts/scaffold.mjs \
   --target=../new-project \
   --preset=monorepo-web-backend-public \
   --css=tailwind \
+  --package-manager=pnpm \
+  --turborepo=yes \
   --deployment=vercel-supabase \
   --tracker=linear \
   --execute

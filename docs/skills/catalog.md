@@ -27,6 +27,8 @@
 
 출처의 모든 스킬을 무조건 설치하지 않는다. composition의 목적과 기술 계층에 필요한 스킬만 선택한다.
 
+맷 포콕 스킬의 단계별 사용 예시는 [`shared/mattpocock-workflow.md`](shared/mattpocock-workflow.md)에서 관리한다.
+
 ## 외부 스킬 기록 항목
 
 - 저장소 URL과 원본 경로

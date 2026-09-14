@@ -16,7 +16,8 @@ supabase/
 - 원격 Production DB를 Dashboard에서 직접 수정하지 않는다.
 - 로컬 DB에서 마이그레이션을 검증한다.
 - 마이그레이션 파일을 Git에 커밋한다.
-- Preview·Staging·Production Supabase 프로젝트를 분리한다.
+- Preview와 Production Supabase 프로젝트를 분리한다.
+- Staging은 별도 검증 환경이 필요한 경우에만 추가한다.
 - Production 적용은 CI/CD 또는 승인된 배포 절차로 수행한다.
 - Seed 데이터는 환경과 목적을 구분한다.
 - 적용된 마이그레이션 파일을 임의로 삭제·수정·재정렬하지 않는다.

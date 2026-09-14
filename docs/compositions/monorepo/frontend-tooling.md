@@ -10,6 +10,10 @@ app/web/docs           도구 사용법과 UI 문서
 
 루트에서 전체 모노레포의 공통 ESLint·Prettier 정책을 관리하고, `app/web`에는 웹 전용 규칙만 추가한다. 설정을 계층별로 복사하지 않는다.
 
+패키지 매니저는 모노레포 전체에서 하나만 사용하며 기본값은 `pnpm`이다. HTTP client와 adapter는 [`frontend-http-client.md`](../../model/frontend-http-client.md) 기준으로 결정하고, 공유 API client가 있으면 루트 문서에 경계를 기록한다.
+
+Turborepo는 JS/TS 앱이나 공유 패키지가 둘 이상일 때 선택한다. 도입 기준과 `turbo.json`, task·cache·CI 규칙은 [`monorepo-turborepo.md`](../../model/monorepo-turborepo.md)를 따른다.
+
 ## 기본 검증 흐름
 
 ```text

@@ -8,6 +8,21 @@
 - Tailwind CSS와 vanilla-extract는 웹 프론트엔드 선택지다.
 - React Native + Expo 모바일에는 웹 CSS 선택지를 강제하지 않는다.
 
+## 패키지 매니저 선택
+
+프론트엔드와 모노레포는 다음 네 가지 중 하나를 선택하며, 하나의 프로젝트 안에서 혼용하지 않는다.
+
+| 선택지 | 적합한 상황 |
+| --- | --- |
+| `pnpm` | 모노레포, workspace 의존성, 빠른 설치와 디스크 효율이 중요할 때. 기본 추천 |
+| `npm` | 별도 workspace가 없는 단순한 단독 저장소와 최소 전제 조건이 필요한 경우 |
+| Yarn Classic | 기존 프로젝트나 Yarn v1 생태계와의 호환성이 필요한 경우 |
+| Yarn Berry | Plug'n'Play, Yarn workspace, Yarn 중심의 엄격한 의존성 관리가 필요한 경우 |
+
+모노레포는 `pnpm`을 기본값으로 둔다. 기존 저장소를 이어가는 경우에는 기존 lockfile과 CI 환경을 우선한다. 선택한 매니저의 lockfile만 커밋하고, CI·로컬·스캐폴딩 명령에서 같은 매니저를 사용한다.
+
+React Native + Expo에서 Yarn Berry를 선택하면 Plug'n'Play 대신 `nodeLinker: node-modules`를 사용하고, EAS를 쓰는 경우 Corepack과 Yarn 버전을 고정한다. ([Expo package managers](https://docs.expo.dev/more/create-expo/))
+
 ## 프레임워크 선택
 
 ### Next.js
@@ -31,6 +46,7 @@
 | --- | --- |
 | Zustand | 클라이언트 UI 상태 |
 | TanStack Query | 서버 상태, 캐시, 요청 생명주기 |
+| Axios | HTTP 전송, interceptor, 공통 오류·인증 경계 (필요할 때만) |
 | Zod | 런타임 입력·응답 검증 |
 | React Hook Form | 폼 상태와 입력 관리 |
 
@@ -42,3 +58,5 @@ API·서버 데이터 있음       → TanStack Query
 ```
 
 모든 프로젝트에 네 가지를 의무적으로 넣지 않는다. 서버 상태를 Zustand에 저장하지 않으며, 단순한 컴포넌트 상태까지 전역화하지 않는다.
+
+Axios와 adapter 선택 기준은 [`frontend-http-client.md`](frontend-http-client.md)에서 관리한다.

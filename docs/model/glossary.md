@@ -31,7 +31,7 @@
 
 ## 스캐폴딩
 
-프로젝트를 만들 때 필요한 디렉터리, 문서, 규칙, 도구 연결을 정의한 명세다. 현재는 생성기가 아니다.
+프로젝트를 만들 때 필요한 디렉터리, 문서, 규칙, 도구 연결을 정의한 명세다. `composition`은 명세를, `scripts/scaffold.mjs`는 공식 생성기 실행과 기본 문서 배치를 담당한다.
 
 ## composition
 
@@ -43,7 +43,6 @@
 
 - `github-issues`
 - `linear`
-- `github-issues + linear`
 
 ## MCP
 

@@ -7,7 +7,7 @@
 .env.local     로컬 전용 실제 값
 ```
 
-`.env.example`에는 실제 비밀값을 넣지 않는다. `.env.local`과 `.env.*.local`은 Git에 포함하지 않는다.
+`.env.example`에는 실제 비밀값을 넣지 않는다. `.env`, `.env.local`, `.env.*.local`은 Git에 포함하지 않고 `.env.example`만 예외로 포함한다.
 
 ## 공개값과 비밀값
 
