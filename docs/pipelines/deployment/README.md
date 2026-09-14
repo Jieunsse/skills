@@ -8,6 +8,6 @@ Vercel에 애플리케이션을 배포하고 Supabase를 데이터베이스·인
 
 ## aws
 
-AWS 기반 배포 구성이다. AWS의 실행 방식은 고정하지 않으며, 필요할 때 ECS·Lambda·Amplify 등 하위 프로파일로 분리한다.
+AWS 기반 배포 구성이다. 기본값은 Ubuntu LTS 기반 단일 EC2, Nginx, Docker Compose, RDS PostgreSQL, Terraform, CloudWatch, GitHub OIDC + SSM, 단일 AZ다. 필요할 때 ECS·Lambda·Amplify 등 하위 프로파일로 분리한다.
 
 각 배포 문서는 대상 계층, 환경 구분, 환경 변수, 배포 순서, 롤백, 검증 방법을 정의한다.

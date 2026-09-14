@@ -72,7 +72,7 @@ ESLint와 Prettier는 프론트엔드 기본 품질 도구입니다. Storybook�
 ## 배포와 협업
 
 ```text
-배포        Vercel + Supabase 또는 AWS
+배포        Vercel + Supabase 또는 AWS EC2 + Ubuntu + Nginx + Docker Compose
 코드 운영   GitHub Actions, Issue·PR 템플릿, 라벨, 브랜치 규칙
 업무 관리   GitHub Issues 또는 Linear 중 하나 선택
 MCP         Figma, Notion, Slack, Linear
