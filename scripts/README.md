@@ -11,12 +11,18 @@ node scripts/scaffold.mjs --target=../my-project --execute
 node scripts/scaffold.mjs --target=../my-project --preset=monorepo-web-backend-public --execute
 ```
 
-`project-starter`는 향후 배포할 CLI 패키지 이름으로 예약했다. 아직 npm 패키지는 배포하지 않았으므로 아래 명령은 목표 인터페이스다.
+`project-starter`는 `@jieunsse/create-project-starter` 패키지의 CLI 이름이다. npm 배포 전에는 저장소 내부 명령으로 검증하고, 배포 후에는 다음처럼 호출한다.
 
 ```bash
-pnpm create project-starter .
-pnpm create project-starter new-project
+# 배포 전
+node scripts/scaffold.mjs .
+
+# 배포 후
+pnpm create @jieunsse/project-starter .
+pnpm create @jieunsse/project-starter new-project
 ```
+
+현재 디렉터리를 대상으로 하려면 `.`을 사용한다. 패키지 배포와 검증 절차는 [`docs/integration/npm-publishing.md`](../docs/integration/npm-publishing.md)에 기록한다.
 
 기본 실행은 미리보기 모드이며 파일이나 디렉터리를 만들지 않는다. `--execute`를 지정해야 Next.js, Vite, Spring Initializr 생성기를 실행하고 선택 문서를 기록한다.
 

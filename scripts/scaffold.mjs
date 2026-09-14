@@ -83,7 +83,8 @@ const generators = {
 };
 
 function parseTarget() {
-  return resolve(valueOf("target") ?? "./new-project");
+  const positionalTarget = process.argv.slice(2).find((arg) => !arg.startsWith("--"));
+  return resolve(valueOf("target") ?? positionalTarget ?? "./new-project");
 }
 
 function choose(label, values) {
@@ -300,6 +301,7 @@ function usage() {
     "  --package-manager=pnpm|npm|yarn-classic|yarn-berry",
     "  --http-client=fetch|axios",
     "  --axios-adapter=auto|xhr|http|fetch",
+    "  --turborepo=yes|no",
     "  --storybook=yes|no",
     "  --deployment=none|vercel-supabase|aws",
     "  --tracker=github-issues|linear",

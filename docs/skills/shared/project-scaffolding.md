@@ -54,4 +54,4 @@ AI는 사용자의 자연어 요청을 위 명령의 preset과 선택 옵션으�
 - 인증값·비밀값을 생성하거나 기록하지 않는다.
 - 생성 후 `AGENTS.md`, 루트 `docs`, 계층별 `docs`를 확인한다.
 
-`project-starter` npm 패키지는 아직 배포하지 않았다. 현재는 이 저장소에서 `node scripts/scaffold.mjs`를 실행한다.
+배포 전에는 이 저장소에서 `node scripts/scaffold.mjs`를 실행한다. 배포 후에는 `@jieunsse/create-project-starter`의 실행 파일인 `project-starter`를 `pnpm create @jieunsse/project-starter .` 형태로 사용한다.

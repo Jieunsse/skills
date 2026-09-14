@@ -1,0 +1,44 @@
+{
+  "name": "@jieunsse/create-project-starter",
+  "version": "0.1.0",
+  "description": "Interactive project scaffolding wizard for reusable web, backend, mobile, and monorepo setups.",
+  "type": "module",
+  "bin": {
+    "project-starter": "./scripts/scaffold.mjs"
+  },
+  "files": [
+    "scripts/scaffold.mjs",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jieunsse/skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jieunsse/skills/issues"
+  },
+  "homepage": "https://github.com/Jieunsse/skills#readme",
+  "keywords": [
+    "scaffolding",
+    "cli",
+    "project-starter",
+    "nextjs",
+    "vite",
+    "expo",
+    "spring-boot",
+    "monorepo"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node scripts/scaffold.mjs --help",
+    "pack:check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

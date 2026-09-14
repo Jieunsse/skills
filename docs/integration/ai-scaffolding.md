@@ -1,6 +1,6 @@
 # AI 대화형 스캐폴딩
 
-사용자-facing CLI 이름은 `project-starter`로 예약한다. 아직 npm 패키지는 배포하지 않았고, 현재 실행 가능한 도구는 `scripts/scaffold.mjs`다.
+사용자-facing CLI 이름은 `project-starter`이며 npm 패키지 이름은 `@jieunsse/create-project-starter`다. `pnpm create`에서는 패키지 이름에서 `create-`가 생략되어 `@jieunsse/project-starter`로 호출한다.
 
 빈 프로젝트에서 사용자가 이 문서 저장소의 GitHub 주소를 AI에게 제공하고 자연어로 프로젝트 생성을 요청할 수 있도록 설계한다.
 
@@ -30,7 +30,7 @@
 ## 목표 CLI 인터페이스
 
 ```bash
-pnpm create project-starter . \
+pnpm create @jieunsse/project-starter . \
   --preset=monorepo-web-backend-public \
   --execute
 ```

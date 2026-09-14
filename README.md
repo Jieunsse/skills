@@ -112,12 +112,18 @@ node scripts/scaffold.mjs \
   --execute
 ```
 
-`project-starter`는 향후 배포할 CLI 패키지 이름으로 예약했습니다. 아직 npm 패키지는 배포하지 않았으므로 아래 명령은 목표 인터페이스입니다.
+`project-starter`는 `@jieunsse/create-project-starter` 패키지의 CLI 이름입니다. npm 배포 전에는 저장소 내부 명령을 사용하고, 배포 후에는 다음처럼 호출합니다.
 
 ```bash
-pnpm create project-starter .
-pnpm create project-starter new-project
+# 배포 전
+node scripts/scaffold.mjs .
+
+# 배포 후
+pnpm create @jieunsse/project-starter .
+pnpm create @jieunsse/project-starter new-project
 ```
+
+자세한 배포 절차는 [`docs/integration/npm-publishing.md`](docs/integration/npm-publishing.md)를 참고합니다.
 
 AI가 저장소 문서를 읽고 자연어 요청을 적절한 preset으로 매핑하는 규칙은 [`docs/integration/ai-scaffolding.md`](docs/integration/ai-scaffolding.md)에 있습니다.
 
@@ -128,4 +134,4 @@ AI가 저장소 문서를 읽고 자연어 요청을 적절한 preset으로 매�
 - 선택 사항과 미결정 사항을 명시합니다.
 - 실제 프로젝트에서 검증된 구성만 재사용 단위로 승격합니다.
 
-세부 규칙은 [AGENTS.md](AGENTS.md)와 `docs/` 아래의 관련 문서를 기준으로 합니다.
+세부 규칙은 [AGENTS.md](https://github.com/Jieunsse/skills/blob/main/AGENTS.md)와 `docs/` 아래의 관련 문서를 기준으로 합니다.
