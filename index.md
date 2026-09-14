@@ -117,8 +117,13 @@ README.md
 
 - [`docs/pipelines/README.md`](docs/pipelines/README.md) — 파이프라인 공통 기준
 - [`docs/pipelines/trigger-model.md`](docs/pipelines/trigger-model.md) — 수동·PR·배포 트리거 기준
+- [`docs/pipelines/model/`](docs/pipelines/model/) — Pipeline Run 단위·상태·산출물
+- [`docs/pipelines/development/`](docs/pipelines/development/) — Work Intake·PR Validation·API Contract
+- [`docs/pipelines/operations/`](docs/pipelines/operations/) — 모니터링·롤백
 - [`docs/pipelines/frontend/`](docs/pipelines/frontend/) — 프론트엔드 환경 변수
 - [`docs/pipelines/deployment/`](docs/pipelines/deployment/) — 배포 프로파일
+  - [`release.md`](docs/pipelines/deployment/release.md) — release·배포·모니터링 연결
+  - [`data-migration.md`](docs/pipelines/deployment/data-migration.md) — 데이터 변경 적용
   - [`aws.md`](docs/pipelines/deployment/aws.md) — EC2·Ubuntu·Nginx·Docker Compose 기본값
   - [`vercel-supabase.md`](docs/pipelines/deployment/vercel-supabase.md)
   - [`supabase-migrations.md`](docs/pipelines/deployment/supabase-migrations.md)
